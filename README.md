@@ -1,4 +1,4 @@
-<h1>SpaceAdventure - L'expérience interactive spatiale<h1/>
+<h1>SpaceAdventure - L'expérience interactive spatiale</h1>
 
 SpaceAdventure est une expérience interactive unique qui vous permet d'explorer une carte spatiale fictive et évolutive. 
 Utilisant la puissance de l'intelligence artificielle, SpaceAdventure offre à chaque utilisateur la possibilité de créer sa propre planète, 
