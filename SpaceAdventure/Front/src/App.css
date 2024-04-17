@@ -1,0 +1,362 @@
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.blocZone {
+  width: 10000px;
+  height: 10000px;
+  background-image: url("./assets/bg.jpg");
+  background-repeat: repeat;
+  background-size: 754.666667px 490.5px;
+  transition: cursor 2s ease-in-out;
+}
+
+.blocZone:hover{
+  cursor: grab;
+}
+
+
+
+.blocZone:active {
+  cursor: url('./assets/cursorDrag.svg'), auto;
+}
+
+
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  transition: box-shadow 0.1s ease-in-out;
+  animation: moveStars 2s linear forwards;
+  box-shadow: 0 0 10px 10px rgb(231, 181, 105);
+}
+
+.star:hover{
+  cursor: help;
+}
+
+.star-delay-1 { animation-delay: 0.1s; }
+.star-delay-2 { animation-delay: 0.2s; }
+.star-delay-3 { animation-delay: 0.3s; }
+
+@keyframes moveStars {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.blocHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 0px;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+
+.logo {
+  height: 6vw;
+  margin-top: 1vw;
+  margin-left: 90.5vw;
+  width: auto;
+  padding: 0;
+  align-items: center;
+}
+
+.flecheSearch{
+  height: 3vw;
+  margin-bottom: 20vh;
+  margin-left: 92.2vw;
+  width: auto;
+  padding: 0;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+  transform: rotate(-90deg);
+}
+
+.blocAllInput{
+  margin-top: -20vh;
+  display: flex;
+  margin-left: 88.2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width:11vw;
+  height:20vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap:2%;
+  background: rgba(74, 74, 74, 0.51);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.blocAllInput.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.searchBloc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.blocCreate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.textInput{
+  font-size: 1vw;
+ width:78%;
+  margin:0;
+}
+
+.inputPlanet{
+  background: rgba(74, 74, 74);
+  border-radius: 4px;
+  border:1px solid white;
+  width:76%;
+}
+
+.inputPlanetBtn{
+  background: rgba(74, 74, 74);
+  border-radius: 4px;
+  border:1px solid white;
+  width:50%;
+  font-size: 1vw;
+  padding: 2px 4px;
+}
+
+.inputPlanetSelectorType{
+  background: rgba(74, 74, 74);
+  border-radius: 4px;
+  border:1px solid white;
+  width:80%;
+  margin-bottom: 1vw;
+}
+
+.inputPlanet:focus {
+  outline: none;
+}
+
+.showOnHover{
+  width: 200px;
+  height:240px;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: rgba(23, 23, 23, 0.89);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px white solid;
+  padding-bottom: 20px;
+border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+
+.showOnHoverImg {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin-top: 20px;
+  object-fit: cover;
+  border: 1px solid white;
+
+}
+
+.showOnHoverText{
+  font-size: 2vw;
+  z-index: 100;
+color:white /* rgba(250,248,210, 0.8)*/;
+  text-align: center;
+  width: 98%;
+  height: auto;
+  margin-top:20px;
+}
+
+.blocWait{
+  width:100vw;
+  height:100vh;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+  -webkit-backdrop-filter:blur(5.6px);
+  backdrop-filter:blur(5.6px);
+  background: rgba(45, 45, 45, 0.64);
+}
+
+.blocPageInfo{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+  background: transparent;
+}
+
+.showPageInfo{
+  display: none;
+}
+
+
+
+.blocTextWait{
+  height:10vh;
+  text-align: center;
+}
+
+.waitGif{
+  width:20vw
+}
+
+.inputPlanetCreate{
+  background: rgba(74, 74, 74);
+  border-radius: 4px;
+  border:1px solid white;
+  width:76%;
+  margin-bottom: 1vw;
+}
+
+.inputPlanetSelector{
+  background: rgba(74, 74, 74);
+  border-radius: 4px;
+  border:1px solid white;
+  width:80%;
+  margin-bottom: 1vw;
+}
+
+.textInfo{
+  text-align: center;
+  margin-top: 0.5vw;
+}
+
+.carte {
+  width: 80%;
+  background-color: #222;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+height:60vh;
+  cursor: auto;
+  border:1px white solid;
+}
+
+.carte-image {
+  width: 40%;
+  object-fit: cover;
+  height: auto;
+}
+
+.carte-contenu {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 20px;
+}
+
+.textInfoPage{
+  margin: 0;
+}
+
+.flecheSuivant, .flecheRetour {
+  width: 4vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flecheSuivant:hover, .flecheRetour:hover {
+  transform: scale(1.2);
+}
+
+.flecheRetour {
+  transform: rotate(-180deg);
+}
+
+.flecheRetour:hover {
+  transform: rotate(-180deg) scale(1.2);
+}
+
+.flecheSuivant:active, .flecheRetour:active {
+  transform: scale(0.9);
+}
+
+.flecheRetour:active {
+  transform: rotate(-180deg) scale(0.9);
+}
+
+.text-error{
+  color: red;
+  font-size: 1vw;
+margin:3px 0;
+}
+
+.margin-top{
+  margin-top: 1vw;
+}
+
+
+
+/*FAIRE BOUGER LES ÉTOILES MAIS BUG AVEC CARTE
+@keyframes moveStar {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 50px);
+  }
+}
+
+.star-moving {
+  animation: moveStar 100s infinite ease-in-out;
+}*/
